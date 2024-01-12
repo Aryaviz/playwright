@@ -49,3 +49,21 @@ function lengthOfLastWord(s) {
 console.log(lengthOfLastWord("Hello World"));
 console.log(lengthOfLastWord("   fly me   to   the moon  "));
 
+function isAnagram(str1, str2) {
+
+    str1 = str1.replace(/\s/g, '').toLowerCase();
+    str2 = str2.replace(/\s/g, '').toLowerCase();
+
+    return str1.split('').sort().join('') === str2.split('').sort().join('');
+}
+
+console.log(isAnagram('listen', 'silent'));  
+console.log(isAnagram('hello', 'world')); 
+
+function ispalindrome(pal) {
+       pal = pal.replace(/\s/g, '').toLowerCase();
+
+       return pal === pal.split('').reverse().join('');
+
+}
+console.log(ispalindrome('Malayalam'));
