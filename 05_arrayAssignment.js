@@ -12,6 +12,8 @@ Example 2:
 Input: nums = [0]
 Output: [0]
 
+
+
 2) Array intersection
  
 Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
@@ -65,3 +67,23 @@ const target = 18;
 return the indices that has matching target? 7+11 (2,4), 4+14 (1,5)
 
 */
+
+
+function moveZeros(nums) {
+    let nonZeroCount = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== 0) {
+            nums[nonZeroCount] = nums[i];
+            nonZeroCount++;
+        }
+    }
+    for (let i = nonZeroCount; i < nums.length; i++) {
+        nums[i] = 0;
+    }
+
+    return nums;
+}
+
+let nums = [0, 1, 0, 3, 12];
+console.log(moveZeros(nums));
