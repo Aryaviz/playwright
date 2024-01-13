@@ -87,3 +87,23 @@ function moveZeros(nums) {
 
 let nums = [0, 1, 0, 3, 12];
 console.log(moveZeros(nums));
+
+
+function intersection(nums1, nums2) {
+   
+    const set1 = new Set(nums1);
+    const set2 = new Set(nums2);
+
+
+    const commonElements = [...set1].filter(num => set2.has(num));
+
+    return commonElements;
+}
+
+const nums11 = [1, 2, 2, 1];
+const nums21 = [2, 2];
+console.log(intersection(nums11, nums21));
+
+const nums12 = [4, 9, 5];
+const nums22 = [9, 4, 9, 8, 4];
+console.log(intersection(nums12, nums22));
